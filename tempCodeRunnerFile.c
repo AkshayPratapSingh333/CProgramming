@@ -10,7 +10,7 @@ struct Node *next;
 void traverseList(struct Node *head) {
     struct Node *temp = head;  // temp initially points to head (the first node)
 
-    printf("Linked list elements: \n");
+    printf("Linked list elements: ");
     while (temp != NULL) {     // Loop through the list until temp becomes NULL
         printf("%d -> ", temp->data);  // Print the data of the current node
         temp = temp->next;     // Move temp to the next node
@@ -40,7 +40,5 @@ int main(){
     //Terminating list at second node 
     second->data=6;
     second->next = NULL;
-
-    traverseList(head); // calling traverList function to print elments
     return 0;
 }
