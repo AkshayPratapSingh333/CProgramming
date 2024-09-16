@@ -9,12 +9,21 @@ struct Node {
 
 // Function to traverse and print the linked list
 void traverseList(struct Node *ptr) {
-    printf("Linked list elements: \n"); // Print this once before the loop
+    // Print this once before the loop
     while (ptr != NULL) {    
         printf("%d\n", ptr->data);  // Correctly print the data of each node
         ptr = ptr->next;  // Move to the next node
     }
 }
+
+struct Node * insertAtBegin(struct Node *head, int data){ // This function inserts a new node at the beginning of the linked list.
+    
+    struct Node *ptr = (struct Node*)malloc(sizeof(struct Node));
+    ptr->next = head;   // Set the next of new node to the current head
+    ptr->data = data;   // Assign the data to the new node
+    return ptr;         // Return the new node which becomes the new head
+}
+
 
 int main() {
     // Creation of pointers
@@ -40,6 +49,10 @@ int main() {
     second->next = NULL;
 
     // Traverse and print elements of the linked list
+    printf("Linked list elements: \n"); 
+    traverseList(head); 
+    head = insertAtBegin(head,11);
+    printf("List after adding element at begining \n");
     traverseList(head); 
 
     return 0;
