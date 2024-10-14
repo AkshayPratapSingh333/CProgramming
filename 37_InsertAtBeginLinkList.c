@@ -49,10 +49,10 @@ int main() {
     second->next = NULL;
 
     // Traverse and print elements of the linked list
-    printf("Linked list elements: \n"); 
+    printf("Linked list before adding of elements: \n"); 
     traverseList(head); 
     head = insertAtBegin(head,11);
-    printf("List after adding element at begining \n");
+    printf("Linked List after adding element at begining \n");
     traverseList(head); 
 
     return 0;
