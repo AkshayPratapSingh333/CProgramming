@@ -61,7 +61,7 @@ int main() {
 
     // Traverse and print elements of the linked list
 
-    printf("Linked list elements: \n");
+    printf("Linked list before adding element at index: \n");
     traverseList(head); 
     head = insertAtIndex(head,12,2);
     printf("List after adding element at Index \n");
